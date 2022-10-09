@@ -19,7 +19,8 @@ class MapViewer : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMapViewerBinding.inflate(layoutInflater).apply{
-            setContentView(binding.root)
+            setContentView(root)
+            val place = intent.getParcelableExtra<Place>(EXTRA_PLACE)
 
             val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
