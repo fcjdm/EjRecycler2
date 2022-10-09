@@ -11,22 +11,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
 
         binding = ActivityMainBinding.inflate(layoutInflater).apply {
             setContentView(root)
-            /*recycler.adapter = PlaceAdapter(places) {
+            recycler.adapter = PlaceAdapter(places) {
                     place->
-                val intent = Intent(this@MainActivity, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_PERSON, person)
+                val intent = Intent(this@MainActivity, MapViewer::class.java)
+                intent.putExtra(MapViewer.EXTRA_PLACE, place)
                 startActivity(intent)
-            }*/
+            }
         }
     }
 
     private val places =
         listOf(
-            Place("Giralda", "1111", "111", "132131")
+            Place("Giralda", "1111", "111", "https://loremflickr.com/g/240/320/sevilla"),
+            Place("Quini", "1111", "111", "https://loremflickr.com/g/240/320/sevilla"),
+            Place("Catedral", "1111", "111", "https://loremflickr.com/g/240/320/sevilla"),
+
         )
 }
