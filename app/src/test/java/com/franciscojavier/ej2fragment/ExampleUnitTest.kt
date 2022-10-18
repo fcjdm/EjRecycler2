@@ -1,4 +1,4 @@
-package com.franciscojavier.ejrecycler2
+package com.franciscojavier.ej2fragment
 
 import org.junit.Test
 

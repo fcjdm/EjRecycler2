@@ -1,8 +1,8 @@
-package com.franciscojavier.ejrecycler2.ui
+package com.franciscojavier.ej2fragment.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.franciscojavier.ejrecycler2.R
+import com.franciscojavier.ej2fragment.R
 
 class HostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

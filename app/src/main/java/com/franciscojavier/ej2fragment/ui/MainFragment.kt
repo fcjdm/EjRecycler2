@@ -1,4 +1,4 @@
-package com.franciscojavier.ejrecycler2.ui
+package com.franciscojavier.ej2fragment.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.franciscojavier.ejrecycler2.R
-import com.franciscojavier.ejrecycler2.databinding.FragmentMainBinding
-import com.franciscojavier.ejrecycler2.model.Place
+import com.franciscojavier.ej2fragment.model.Place
+import com.franciscojavier.ej2fragment.R
+import com.franciscojavier.ej2fragment.databinding.FragmentMainBinding
 
 
 class MainFragment : Fragment(R.layout.fragment_main) {

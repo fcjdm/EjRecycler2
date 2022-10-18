@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.franciscojavier.ejrecycler2'
+    namespace 'com.franciscojavier.ej2fragment'
     compileSdk 32
 
     defaultConfig {

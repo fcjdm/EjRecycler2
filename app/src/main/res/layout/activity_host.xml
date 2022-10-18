@@ -5,5 +5,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="com.franciscojavier.ejrecycler2.ui.MainFragment"
-    tools:context="com.franciscojavier.ejrecycler2.ui.HostActivity" />
+    android:name="com.franciscojavier.ej2fragment.ui.MainFragment"
+    tools:context="com.franciscojavier.ej2fragment.ui.HostActivity" />
