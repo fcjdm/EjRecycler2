@@ -1,31 +1,36 @@
-package com.franciscojavier.ejrecycler2
+package com.franciscojavier.ejrecycler2.ui
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.franciscojavier.ejrecycler2.databinding.ActivityMainBinding
-
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.franciscojavier.ejrecycler2.R
+import com.franciscojavier.ejrecycler2.databinding.FragmentMainBinding
+import com.franciscojavier.ejrecycler2.model.Place
 
 
-        binding = ActivityMainBinding.inflate(layoutInflater).apply {
-            setContentView(root)
+class MainFragment : Fragment(R.layout.fragment_main) {
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        super.onViewCreated(view, savedInstanceState)
+
+
+        val binding = FragmentMainBinding.bind(view).apply {
             recycler.adapter = PlaceAdapter(places) {
                     place->
                 val gmmIntentUri = Uri.parse("geo:"+place.latitud+","+place.longitud)
                 val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
                 mapIntent.setPackage("com.google.android.apps.maps")
+                val packageManager = requireActivity().packageManager
                 mapIntent.resolveActivity(packageManager)?.let {
                     startActivity(mapIntent)
                 }
             }
         }
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = getString(R.string.app_name)
     }
 
     private val places =

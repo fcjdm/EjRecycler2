@@ -1,10 +1,12 @@
-package com.franciscojavier.ejrecycler2
+package com.franciscojavier.ejrecycler2.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.franciscojavier.ejrecycler2.R
+import com.franciscojavier.ejrecycler2.model.Place
 import com.franciscojavier.ejrecycler2.databinding.ViewPlaceBinding
 
 class PlaceAdapter(val list:List<Place>, val listener: (Place) -> Unit): RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
